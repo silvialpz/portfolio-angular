@@ -4,7 +4,6 @@ import { BigUpdateComponent } from './big-update/big-update';
 import { SmallUpdateComponent } from './small-update/small-update';
 import { DetailPanelComponent } from './detail-panel/detail-panel';
 
-
 interface Article {
   // title: string;
   // imageUrl: string;
@@ -18,55 +17,67 @@ interface Article {
   imports: [RouterOutlet, BigUpdateComponent, SmallUpdateComponent, DetailPanelComponent], // RouterOutlet is typically used for routing, keep it for now.
   template: `
     <main class="min-h-screen p-8">
-      <!-- This will be the main container for your two columns -->
-      <div class="max-w-7xl mx-auto w-full">
-        <header class="mb-12 text-center">
+      <header class="mb-1 text-center flex">
           <h1 class="text-6xl font-extrabold" style="text-transform: uppercase;">SILVIA LOPEZ</h1>
-          <p class="text-lg mt-2 opacity-80">some updates on what i've been up to</p>
         </header>
+      <!-- This will be the main container for your two columns -->
+      <div class="mx-auto w-full">
 
-        <!-- This div will hold our two columns -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">  <!-- setting up a 3 column grid and let big updates span two columns -->
+        <div class="grid grid-cols-1 md:grid-cols-8 gap-3">
+
+          <!-- 6-Column Banner (Wired-like label) -->
+          <div class="md:col-span-6 bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start rounded-sm">
+              <h2 class="text-sm font-semibold">techy updates</h2>
+          </div>
+
+          <!-- 2-Column Banner (Wired-like label) -->
+          <div class="md:col-span-2 bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start rounded-sm">
+              <h2 class="text-sm font-semibold text-center">life's side quests</h2>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-8">  <!-- setting up a 3 column grid and let big updates span two columns -->
           <!-- Left Column: Big Updates (Career Focused) -->
-          <div class="md:col-span-2 bg-white p-8 rounded-xl shadow-lg">
+          <div class="md:col-span-2">
             <!-- Big update components will go here -->
-             <div class="">
               <app-big-update
-                title="completed my computer engineering degree at uoft"
+              title=""
+              imageUrl="/assets/siggraph2025.png"
+              description="Going to Vancouver to be a Student Volunteer a 3rd and Final Time"
+              (click)="openDetailPanel({ id: 'siggraph' })"
+              ></app-big-update>
+
+              <app-big-update
+                title=""
+                imageUrl="/assets/code-camp.gif"
+                description="Joined HER CODE CAMP as Head of Logistics"
+                (click)="openDetailPanel({ id: 'code-camp' })"
+              ></app-big-update>
+          </div>
+
+          <div class="md:col-span-4">
+            <app-big-update
+                title="Completed My Computer Engineering Degree at UofT"
                 imageUrl="/assets/graduated.jpg"
                 description=""
                 (click)="openDetailPanel({ id: 'graduated' })"
-              >
-              </app-big-update>
-              <app-big-update
-                title="joined HER CODE CAMP as head of logistics"
-                imageUrl="/assets/code-camp.gif"
-                description=""
-                (click)="openDetailPanel({ id: 'code-camp' })"
-              >
-              </app-big-update>
-              </div>
+              ></app-big-update>
           </div>
 
+
           <!-- Right Column: Small Updates (General Life) -->
-          <div class="md:col-span-1 bg-white p-8 rounded-xl shadow-lg">
+          <div class="md:col-span-2">
             <!-- Small update components will go here -->
+            
             <app-small-update
-              title="going to vancouver to be a student volunteer a third and final time"
-              imageUrl="/assets/siggraph2025.png"
-              description=""
-              (click)="openDetailPanel({ id: 'siggraph' })"
-            >
-            </app-small-update>
-            <app-small-update
-              title="became an airbnb superhost in the first five months of operating"
+              title="Became an Airbnb Superhost in the First Five Months"
               imageUrl="/assets/rosamanda.png"
               description=""
               (click)="openDetailPanel({ id: 'superhost' })"
             >
             </app-small-update>
             <app-small-update
-              title="bridging language gaps and fostering community safety as an administrator for toronto first aid"
+              title="Bridging Language Gaps as an Administrator for Toronto First Aid"
               imageUrl="/assets/toronto-first-aid.png"
               description=""
               (click)="openDetailPanel({ id: 'first-aid' })"
@@ -90,7 +101,7 @@ export class App {
   title = 'portfolio';
 
   isDetailPanelOpen: boolean = false;
-  selectedArticleId: string | null = null; 
+  selectedArticleId: string | null = null;
 
   openDetailPanel(article: Article) {
     this.isDetailPanelOpen = true;

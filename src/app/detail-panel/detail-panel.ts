@@ -1,7 +1,6 @@
 import { Component, Input, Output, EventEmitter, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
 @Component({
   selector: 'app-detail-panel',
   standalone: true,
@@ -9,19 +8,22 @@ import { CommonModule } from '@angular/common';
   template: `
     <ng-container *ngIf="isOpen">
       <div
-        style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.1); z-index: 40;"
+        style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 40;"
+        class="backdrop-blur-sm"
         (click)="closePanel()"
       >
         <!-- This div will act as the overlay. No styling, just a block element. -->
       </div>
 
       <div
-        style="position: fixed; top: 0; right: 0; height: 100%; width: 300px; background-color: lightgray; z-index: 50; padding: 20px; overflow-y: auto;"
+        style="position: fixed; top: 0; right: 0; height: 100%; z-index: 50; padding: 20px; overflow-y: auto;"
+        class="w-1/2 bg-violet-100"
       >
         <!-- Close Button -->
         <button
           (click)="closePanel()"
           style="position: absolute; top: 10px; right: 10px; font-size: 24px; cursor: pointer; background: none; border: none;"
+          
         >
           &times;
         </button>

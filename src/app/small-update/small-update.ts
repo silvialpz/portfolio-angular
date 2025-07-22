@@ -6,10 +6,11 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <article class="bg-gray-50 p-4 rounded-lg shadow-sm flex flex-col items-start">
-      <img [src]="imageUrl" alt="{{ title }}" class="w-full rounded-md mb-3" />
-      <h3 class="text-lg font-semibold mb-1">{{ title }}</h3>
-      <p class="text-gray-600 text-sm leading-snug">{{ description }}</p>
+    <article class="p-4 rounded-lg shadow-sm flex w-full items-center"> 
+      <div class="flex-grow pr-4"> 
+        <h3 class="text-lg font-semibold mb-1">{{ title }}</h3>
+      </div>
+      <img [src]="imageUrl" alt="{{ title }}" class="w-1/3 h-auto object-contain rounded-md" /> 
     </article>
   `,
   styleUrl: './small-update.css'

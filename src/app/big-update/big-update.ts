@@ -6,10 +6,10 @@ import { CommonModule } from '@angular/common'; // Important for standalone comp
   standalone: true, // This component is self-contained
   imports: [CommonModule], // Common Angular directives
   template: `
-    <article class="bg-gray-50 p-6 rounded-lg shadow-md overflow-hidden">
+    <article class="p-6 rounded-lg shadow-md overflow-hidden">
       <img [src]="imageUrl" alt="{{ title }}" class="w-full rounded-md mb-4" />
-      <h3 class="text-2xl font-bold mb-2">{{ title }}</h3>
-      <p class="text-gray-700 leading-relaxed">{{ description }}</p>
+      <h3 class="text-5xl font-bold mb-2">{{ title }}</h3>
+      <p class="leading-relaxed">{{ description }}</p>
     </article>
   `,
   styles: [] 

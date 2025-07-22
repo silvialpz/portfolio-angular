@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+  margin: 0; /* Remove default body margin */
+  font-family: 'Inter', sans-serif; /* Use Inter as the primary font */
+  background-color: #e2e0f2; /* Your chosen background color */
+  color: #2f22ab; /* Your chosen text color */
+  line-height: 1.6; /* Improve readability for body text */
+  -webkit-font-smoothing: antialiased; /* Smoother font rendering */
+  -moz-osx-font-smoothing: grayscale; /* Smoother font rendering */
+}
+
+/* Apply lowercase transformation to most text elements globally */
+/* We will explicitly override this for 'SILVIA LOPEZ' in the HTML */
+p, h2, h3, h4, h5, h6, a, span, div {
+  text-transform: lowercase;
+}

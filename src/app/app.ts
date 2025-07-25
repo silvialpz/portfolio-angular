@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { BigUpdateComponent } from './big-update/big-update';
 import { SmallUpdateComponent } from './small-update/small-update';
 import { DetailPanelComponent } from './detail-panel/detail-panel';
+import { BigProjectComponent } from './big-project/big-project';
 
 interface Article {
   // title: string;
@@ -14,7 +15,7 @@ interface Article {
 @Component({
   selector: 'app-root',
   standalone: true, // Important: Makes this component self-contained
-  imports: [RouterOutlet, BigUpdateComponent, SmallUpdateComponent, DetailPanelComponent], // RouterOutlet is typically used for routing, keep it for now.
+  imports: [RouterOutlet, BigUpdateComponent, SmallUpdateComponent, DetailPanelComponent, BigProjectComponent], // RouterOutlet is typically used for routing, keep it for now.
   template: `
     <main class="min-h-screen p-8">
       <header class="mb-1 text-center flex">
@@ -26,13 +27,17 @@ interface Article {
         <div class="grid grid-cols-1 md:grid-cols-8 gap-3">
 
           <!-- 6-Column Banner (Wired-like label) -->
-          <div class="md:col-span-6 bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start rounded-sm">
-              <h2 class="text-sm font-semibold">techy updates</h2>
+          <div class="md:col-span-6 border-t-4 mt-5">
+            <div class="bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start w-min">
+              <h2 class="text-sm font-semibold text-center whitespace-nowrap">techy updates</h2>
+            </div>
           </div>
 
           <!-- 2-Column Banner (Wired-like label) -->
-          <div class="md:col-span-2 bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start rounded-sm">
-              <h2 class="text-sm font-semibold text-center">life's side quests</h2>
+          <div class="md:col-span-2 border-t-4 mt-5">
+            <div class="bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start w-min">
+              <h2 class="text-sm font-semibold text-center whitespace-nowrap">life's side quests</h2>
+            </div>
           </div>
         </div>
         
@@ -59,11 +64,10 @@ interface Article {
             <app-big-update
                 title="Completed My Computer Engineering Degree at UofT"
                 imageUrl="/assets/graduated.jpg"
-                description=""
+                description="Now and aspiring Technical Director seeking entry-level role in film/VFX. "
                 (click)="openDetailPanel({ id: 'graduated' })"
               ></app-big-update>
           </div>
-
 
           <!-- Right Column: Small Updates (General Life) -->
           <div class="md:col-span-2">
@@ -86,6 +90,26 @@ interface Article {
           </div>
         </div>
       </div>
+
+      <!-- Projects will go here -->
+      <section>
+          <div class="md:col-span-6 border-t-4 mt-5">
+            <div class="bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start w-min">
+              <h2 class="text-sm font-semibold text-center whitespace-nowrap">Projects</h2>
+            </div>
+          </div>
+        
+
+        <app-big-project></app-big-project>
+      </section>
+
+      <section class="h-[90vh]">
+          <div class="md:col-span-6 border-t-4 ">
+            <div class="bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start w-min">
+              <h2 class="text-sm font-semibold text-center whitespace-nowrap">Art</h2>
+            </div>
+          </div>
+      </section>
     </main>
 
     <app-detail-panel

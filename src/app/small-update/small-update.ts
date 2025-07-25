@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <article class="p-4 rounded-lg shadow-sm flex w-full items-center"> 
+    <article class="p-4 rounded-lg flex w-full items-center"> 
       <div class="flex-grow pr-4"> 
         <h3 class="text-lg font-semibold mb-1">{{ title }}</h3>
       </div>

@@ -103,41 +103,66 @@ interface Article {
         <app-big-project></app-big-project>
       </section>
 
-      <section class="h-screen">
-          <div class="md:col-span-6 border-t-4 ">
-            <div class="bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start w-min">
-              <h2 class="text-sm font-semibold text-center whitespace-nowrap">Art</h2>
-            </div>
+      <section id="artPortfolioSection" class="h-[90vh] flex flex-col">
+        <div class="md:col-span-6 border-t-4">
+          <div class="bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start w-fit rounded-br-md">
+            <h2 class="text-sm font-semibold text-center whitespace-nowrap">Art</h2>
+          </div>
+        </div>
+
+        <div id="mainContentWrapper" class="flex-grow py-4 flex h-full">
+
+          <div class="w-80 p-4 shrink-0 whitespace-normal">
+            <p class="text-indigo-800 text-lg leading-relaxed">I love drawing. I have been developing my skills through youtube videos and self study passionately since middle school. Here's what I have been working on.</p>
           </div>
 
-          <div class="flex-grow py-4 flex">
-            <div class="w-80 p-4 shrink-0 whitespace-normal">
-              <p class="text-indigo-800 text-lg leading-relaxed">I love drawing. I have been developing my skills through youtube videos and self study passionately since middle school. Here's what I have been working on.</p>
-            </div>
-            
-              <div class="w-min items-center justify-center">
-                <h2 class="text-4xl">Urban Landscapes</h2>
-              </div>
+          <div id="horizontalScrollContainer" class="flex overflow-x-auto whitespace-nowrap flex-grow">
 
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-2 whitespace-normal">
+            <div class="inline-block w-full md:w-[80vw] lg:w-[60vw] h-full bg-blue-100 border border-blue-300 rounded-lg shadow-md last:mr-0 align-top shrink-0">
+              <!-- <h3 class="text-2xl font-bold mb-6 text-blue-800 text-center">Urban Landscapes</h3>  -->
+              <div class="grid grid-cols-1 md:grid-cols-2 whitespace-normal">
 
                 <div class="col-span-1 flex flex-col items-center">
-                  <img src="/assets/window.jpeg" alt="View from a window overlooking a city at dusk" class="max-h-[300px] object-contain rounded-md shadow-md">
+                  <img src="/assets/window.jpeg" alt="View from a window overlooking a city at dusk" class="w-full max-h-[250px] object-contain rounded-md shadow-md">
+                
                 </div>
 
-                <div class="col-span-1 flex flex-col items-center ml-6">
-                  <p class="text-sm mb-2 text-center">Views from my college apartment</p>
-                  <img src="/assets/groceries.JPG" alt="Street with a bicycle, buildings, and a crosswalk" class="max-h-[250px] object-contain rounded-md shadow-md">
+                <div class="col-span-1 flex flex-col items-center">
+                  <p class="text-sm text-gray-700 mb-2 text-center">Views from my college apartment</p>
+                  <img src="/assets/groceries.JPG" alt="Street with a bicycle, buildings, and a crosswalk" class="w-full max-h-[180px] object-contain rounded-md shadow-md">
                 </div>
 
                 <div class="col-span-full md:col-span-2 flex flex-col items-center">
-                  <p class="text-sm mt-2 text-center">Rainy day in Niagara Falls</p>
-                  <img src="/assets/niagara.jpeg" alt="Movieland Midway building with neon signs on a rainy street" class="max-h-[400px] object-contain rounded-md shadow-md">
+                  <p class="text-sm text-gray-700 mt-2 text-center">Rainy day in Niagara Falls</p>
+                  <img src="/assets/niagara.jpeg" alt="Movieland Midway building with neon signs on a rainy street" class="w-full max-h-[300px] object-contain rounded-md shadow-md">
                 </div>
               </div>
-              
+            </div>
 
+            <div class="inline-block w-full md:w-[80vw] lg:w-[60vw] h-full  bg-green-100 border border-green-300 rounded-lg shadow-md last:mr-0 align-top shrink-0">
+              <!-- <h3 class="text-2xl font-bold mb-6 text-green-800 text-center">Nature Landscapes</h3>  -->
+              <div class="grid grid-flow-col grid-rows-2 whitespace-normal">
+
+                <div class="">
+                  <img src="/assets/indura.jpeg" alt="View from the pier in Indura, Tela" class="w-full max-h-[250px] object-contain rounded-md shadow-md">
+                  <p class="text-sm text-center">Pier in Tela</p> 
+                </div>
+
+
+                <div class="">
+                  <img src="/assets/trees.JPG" alt="Trees I thought up of in my mind" class="w-full max-h-[250px] object-contain rounded-md shadow-md">
+                  <p class="text-sm mb-2 text-center">Trees from my mind</p> 
+                </div>
+
+                <div class="row-span-2">
+                  <img src="/assets/merendon.jpeg" alt="Merendon mountains and smog" class="w-full max-h-[700px] object-contain rounded-md shadow-md">
+                  <p class="text-sm mt-2 text-center">Merendon and smog</p>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+
       </section>
     </main>
 

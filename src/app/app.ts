@@ -4,6 +4,7 @@ import { BigUpdateComponent } from './big-update/big-update';
 import { SmallUpdateComponent } from './small-update/small-update';
 import { DetailPanelComponent } from './detail-panel/detail-panel';
 import { BigProjectComponent } from './big-project/big-project';
+import { LabelComponent } from './label/label';
 
 interface Article {
   // title: string;
@@ -15,7 +16,7 @@ interface Article {
 @Component({
   selector: 'app-root',
   standalone: true, // Important: Makes this component self-contained
-  imports: [RouterOutlet, BigUpdateComponent, SmallUpdateComponent, DetailPanelComponent, BigProjectComponent], // RouterOutlet is typically used for routing, keep it for now.
+  imports: [RouterOutlet, BigUpdateComponent, SmallUpdateComponent, DetailPanelComponent, BigProjectComponent, LabelComponent], // RouterOutlet is typically used for routing, keep it for now.
   template: `
     <main class="min-h-screen p-8">
       <header class="mb-1 text-center flex">
@@ -24,20 +25,17 @@ interface Article {
       <!-- This will be the main container for your two columns -->
       <div class="mx-auto w-full">
 
-        <div class="grid grid-cols-1 md:grid-cols-8 gap-3">
+        <div class="grid grid-cols-1 md:grid-cols-8 gap-3 mt-5">
 
           <!-- 6-Column Banner (Wired-like label) -->
-          <div class="md:col-span-6 border-t-4 mt-5">
-            <div class="bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start w-min">
-              <h2 class="text-sm font-semibold text-center whitespace-nowrap sans-serif-label-text">techy updates</h2>
-            </div>
+          <div class="md:col-span-6">
+            <app-label labelText="techy updates"></app-label>
           </div>
 
+
           <!-- 2-Column Banner (Wired-like label) -->
-          <div class="md:col-span-2 border-t-4 mt-5">
-            <div class="bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start w-min">
-              <h2 class="text-sm font-semibold text-center whitespace-nowrap sans-serif-label-text">life's side quests</h2>
-            </div>
+          <div class="md:col-span-2">
+            <app-label labelText="life's side quests"></app-label>
           </div>
         </div>
         
@@ -93,22 +91,12 @@ interface Article {
 
       <!-- Projects will go here -->
       <section>
-          <div class="md:col-span-6 border-t-4 mt-5">
-            <div class="bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start w-min">
-              <h2 class="text-sm font-semibold text-center whitespace-nowrap sans-serif-label-text">Projects</h2>
-            </div>
-          </div>
-        
-
+        <app-label labelText="Projects"></app-label>
         <app-big-project></app-big-project>
       </section>
 
       <section id="artPortfolioSection" class="h-[90vh] flex flex-col">
-        <div class="md:col-span-6 border-t-4">
-          <div class="bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start w-fit rounded-br-md">
-            <h2 class="text-sm font-semibold text-center whitespace-nowrap sans-serif-label-text">Art</h2>
-          </div>
-        </div>
+        <app-label labelText="Art"></app-label>
 
         <div id="mainContentWrapper" class="flex-grow py-4 flex h-full serif-text">
 

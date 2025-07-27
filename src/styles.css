@@ -14,6 +14,30 @@ body {
   -moz-osx-font-smoothing: grayscale; /* Smoother font rendering */
 }
 
+.serif-title-text {
+font-family: alegreya, serif;
+font-weight: 700;
+font-style: normal;
+}
+
+.serif-text {
+  font-family: alegreya, serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.sans-serif-subtitle-text {
+font-family: source-code-pro, monospace;
+font-weight: 900;
+font-style: normal;
+}
+
+.sans-serif-label-text {
+font-family: source-code-pro, monospace;
+font-weight: 900;
+font-style: italic;
+}
+
 /* Apply lowercase transformation to most text elements globally */
 /* We will explicitly override this for 'SILVIA LOPEZ' in the HTML */
 /* p, h2, h3, h4, h5, h6, a, span, div {

@@ -7,9 +7,9 @@ import { CommonModule } from '@angular/common'; // Important for standalone comp
   imports: [CommonModule], // Common Angular directives
   template: `
     <article class="p-6 rounded-lg overflow-hidden">
-      <img [src]="imageUrl" alt="{{ title }}" class="w-full rounded-md mb-4" />
-      <h3 class="text-5xl font-bold mb-2">{{ title }}</h3>
-      <p class="leading-relaxed">{{ description }}</p>
+      <img [src]="imageUrl" alt="{{ title }}" class="w-full rounded-md" />
+      <h3 class="text-5xl font-bold py-1">{{ title }}</h3>
+      <p class="leading-relaxed tracking-tight sans-serif-subtitle-text text-xl/tight font-stretch-condensed">{{ description }}</p>
     </article>
   `,
   styles: [] 

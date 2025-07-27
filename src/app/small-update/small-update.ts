@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   template: `
     <article class="p-4 rounded-lg flex w-full items-center"> 
       <div class="flex-grow pr-4"> 
-        <h3 class="text-lg font-semibold mb-1">{{ title }}</h3>
+        <h3 class="text-lg/6 font-semibold mb-1 serif-title-text">{{ title }}</h3>
       </div>
       <img [src]="imageUrl" alt="{{ title }}" class="w-1/3 h-auto object-contain rounded-md" /> 
     </article>

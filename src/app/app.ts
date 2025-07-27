@@ -29,14 +29,14 @@ interface Article {
           <!-- 6-Column Banner (Wired-like label) -->
           <div class="md:col-span-6 border-t-4 mt-5">
             <div class="bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start w-min">
-              <h2 class="text-sm font-semibold text-center whitespace-nowrap">techy updates</h2>
+              <h2 class="text-sm font-semibold text-center whitespace-nowrap sans-serif-label-text">techy updates</h2>
             </div>
           </div>
 
           <!-- 2-Column Banner (Wired-like label) -->
           <div class="md:col-span-2 border-t-4 mt-5">
             <div class="bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start w-min">
-              <h2 class="text-sm font-semibold text-center whitespace-nowrap">life's side quests</h2>
+              <h2 class="text-sm font-semibold text-center whitespace-nowrap sans-serif-label-text">life's side quests</h2>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@ interface Article {
             <app-big-update
                 title="Completed My Computer Engineering Degree at UofT"
                 imageUrl="/assets/graduated.jpg"
-                description="Now and aspiring Technical Director seeking entry-level role in film/VFX. "
+                description="Now an aspiring Technical Director seeking entry-level role in film/VFX. "
                 (click)="openDetailPanel({ id: 'graduated' })"
               ></app-big-update>
           </div>
@@ -95,7 +95,7 @@ interface Article {
       <section>
           <div class="md:col-span-6 border-t-4 mt-5">
             <div class="bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start w-min">
-              <h2 class="text-sm font-semibold text-center whitespace-nowrap">Projects</h2>
+              <h2 class="text-sm font-semibold text-center whitespace-nowrap sans-serif-label-text">Projects</h2>
             </div>
           </div>
         
@@ -106,18 +106,17 @@ interface Article {
       <section id="artPortfolioSection" class="h-[90vh] flex flex-col">
         <div class="md:col-span-6 border-t-4">
           <div class="bg-indigo-800 text-violet-100 px-3 py-1 flex items-center justify-start w-fit rounded-br-md">
-            <h2 class="text-sm font-semibold text-center whitespace-nowrap">Art</h2>
+            <h2 class="text-sm font-semibold text-center whitespace-nowrap sans-serif-label-text">Art</h2>
           </div>
         </div>
 
-        <div id="mainContentWrapper" class="flex-grow py-4 flex h-full">
-
-          <div class="w-80 p-4 shrink-0 whitespace-normal">
-            <p class="text-indigo-800 text-lg leading-relaxed">I love drawing. I have been developing my skills through youtube videos and self study passionately since middle school. Here's what I have been working on.</p>
-          </div>
+        <div id="mainContentWrapper" class="flex-grow py-4 flex h-full serif-text">
 
           <div id="horizontalScrollContainer" class="flex overflow-x-auto whitespace-nowrap flex-grow">
 
+            <div class="w-80 p-4 shrink-0 whitespace-normal h-min">
+              <p class="text-indigo-800 text-lg leading-relaxed">I love drawing. I have been developing my skills through youtube videos and self study passionately. Here's what I have been working on.</p>
+            </div>
             <div class="inline-block w-full md:w-[80vw] lg:w-[50vw] h-full rounded-lg ast:mr-0 align-top shrink-0">
               <!-- <h3 class="text-2xl font-bold mb-6 text-blue-800 text-center">Urban Landscapes</h3>  -->
               <div class="grid grid-cols-1 md:grid-cols-2 whitespace-normal">
@@ -134,7 +133,7 @@ interface Article {
 
                 <div class="col-span-full md:col-span-2 flex flex-col items-center">
                   <p class="text-sm mt-2 text-center">Rainy day in Niagara Falls</p>
-                  <img src="/assets/niagara.jpeg" alt="Movieland Midway building with neon signs on a rainy street" class="w-full max-h-[300px] object-contain rounded-md">
+                  <img src="/assets/niagara.jpeg" alt="Movieland Midway building with neon signs on a rainy street" class="w-full max-h-[290px] object-contain rounded-md">
                 </div>
               </div>
             </div>
@@ -176,11 +175,11 @@ interface Article {
               <div class="grid grid-flow-col gap-2 grid-rows-2 whitespace-normal">
 
                 <div class="">
-                  <img src="/assets/avocados.JPG" alt="Avocados" class="w-full max-h-[290px] object-contain rounded-md">
+                  <img src="/assets/avocados.JPG" alt="Avocados" class="w-full max-h-[270px] object-contain rounded-md">
                 </div>
 
                 <div class="">
-                  <img src="/assets/coco.jpeg" alt="Coco" class="w-full max-h-[280px] object-contain rounded-md">
+                  <img src="/assets/coco.jpeg" alt="Coco" class="w-full max-h-[260px] object-contain rounded-md">
                 </div>
               </div>
             </div>

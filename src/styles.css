@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 body {
@@ -28,7 +27,7 @@ font-style: normal;
 
 .sans-serif-subtitle-text {
 font-family: source-code-pro, monospace;
-font-weight: 900;
+font-weight: 600;
 font-style: normal;
 }
 

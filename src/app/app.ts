@@ -19,8 +19,16 @@ interface Article {
   imports: [RouterOutlet, BigUpdateComponent, SmallUpdateComponent, DetailPanelComponent, BigProjectComponent, LabelComponent], // RouterOutlet is typically used for routing, keep it for now.
   template: `
     <main class="min-h-screen p-8">
-      <header class="mb-1 text-center flex">
-          <h1 class="text-6xl font-extrabold" style="text-transform: uppercase;">SILVIA LOPEZ</h1>
+      <header class="mb-1 text-center flex items-end justify-between text-lg">
+          <div class="flex justify-around flex-grow">
+            <a href="#projectSection" class="sans-serif-subtitle-text">Projects</a>
+            <a href="#artSection" class="sans-serif-subtitle-text">Art</a>
+          </div>
+          <a class="text-5xl font-extrabold" style="text-transform: uppercase;" href="/">SILVIA LOPEZ</a>
+          <div class="flex-grow justify-around flex">
+            <a class="sans-serif-subtitle-text">Resume</a>
+            <button href="" class="bg-indigo-800 sans-serif-subtitle-text rounded-full px-2 text-violet-50">Contact</button>
+          </div>
         </header>
       <!-- This will be the main container for your two columns -->
       <div class="mx-auto w-full">
@@ -39,7 +47,7 @@ interface Article {
           </div>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-8">  <!-- setting up a 3 column grid and let big updates span two columns -->
+        <div class="grid grid-cols-1 md:grid-cols-8 pb-10">  <!-- setting up a 3 column grid and let big updates span two columns -->
           <!-- Left Column: Big Updates (Career Focused) -->
           <div class="md:col-span-2">
             <!-- Big update components will go here -->
@@ -72,7 +80,7 @@ interface Article {
             <!-- Small update components will go here -->
             
             <app-small-update
-              title="Became an Airbnb Superhost in the First Five Months"
+              title="First Five Months of hosting on Airbnb and I'm now a Superhost"
               imageUrl="/assets/rosamanda.png"
               description=""
               (click)="openDetailPanel({ id: 'superhost' })"
@@ -90,12 +98,12 @@ interface Article {
       </div>
 
       <!-- Projects will go here -->
-      <section>
+      <section id="projectSection">
         <app-label labelText="Projects"></app-label>
         <app-big-project></app-big-project>
       </section>
 
-      <section id="artPortfolioSection" class="h-[90vh] flex flex-col">
+      <section id="artSection" class="h-[90vh] flex flex-col">
         <app-label labelText="Art"></app-label>
 
         <div id="mainContentWrapper" class="flex-grow py-4 flex h-full serif-text">
@@ -103,7 +111,8 @@ interface Article {
           <div id="horizontalScrollContainer" class="flex overflow-x-auto whitespace-nowrap flex-grow">
 
             <div class="w-80 p-4 shrink-0 whitespace-normal h-min">
-              <p class="text-indigo-800 text-lg leading-relaxed">I love drawing. I have been developing my skills through youtube videos and self study passionately. Here's what I have been working on.</p>
+              <p class="text-lg leading-relaxed">I love drawing. I have been developing my skills through youtube videos and self study passionately. Here's what I have been working on.</p>
+              <p class="text-right pt-5 sans-serif-subtitle-text">>>>>>>>>>>>></p>
             </div>
             <div class="inline-block w-full md:w-[80vw] lg:w-[50vw] h-full rounded-lg ast:mr-0 align-top shrink-0">
               <!-- <h3 class="text-2xl font-bold mb-6 text-blue-800 text-center">Urban Landscapes</h3>  -->

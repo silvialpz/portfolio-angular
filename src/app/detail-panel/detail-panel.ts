@@ -32,9 +32,32 @@ import { CommonModule } from '@angular/common';
         <div style="padding-top: 30px;">
 
           <div *ngIf="articleId === 'graduated'">
-            <img src="/assets/graduated.jpg" alt="Graduation" />
-            <h2>graduated from computer engineering!</h2>
-            <p>graduated!</p>
+            <h2>Graduated!</h2>
+            <p>Now that I’m done with Computer Engineering and it’s summer and the UofT Campus looks beautiful I want to take a moment to reflect on the places and moments that I cherish most from my five years here.</p>
+
+            <h3>Favourite library: Knox College Library</h3>
+            <p>Although technically not a UofT library, it’s got a beautiful hall right next to king’s college circle with stained glass, antique desk lamps, and high chairs.</p>
+            
+            <h3>Favourite Classes I Took:</h3>
+            <p>Computer Graphics taught by David Levin and Alec Jacobson</p>
+            <p>Digital Signal Processing by Wei Yu. I also had the best TA during my time there called Aaron.</p>
+            
+            <h3>Eng Building I Spent the Most Time In: Galbraith</h3>
+            <p>Most lectures and almost ALL upper year labs were here.</p>
+            
+            <h3>Library I Spent the Most Time In: St Mike's Kelly Library</h3>
+            <p>Kelly was across the street from where I lived so it was too convenient to go there despite the fact it is probably the university’s ugliest brutalist library beating out Robarts. Here is an article from 2022 that commemorates the time it became a film set for The Handmaid’s Tale around the time of midterms for that semester. </p>
+            <a href="https://www.boundarynews.com/post/kelly-library-deemed-too-depressing-for-handmaid-s-tale-location">Kelly Library Deemed "Too Depressing" for Handmaid’s Tale Location</a>
+          
+            <h3>Hardest Class I Took:</h3>
+            <p>Computer Architecture taught by Mark Jeffrey</p>
+            
+            <h3>Favourite Quad: Victoria College</h3>
+            <p>It became a routine to pick up a latte and sit under the ivy arbor. it’s especially beautiful in the spring and summer.</p>
+          
+            <h3>Favourite Restaurant Near School: Magic Noodle</h3>
+            <p>On harbord, short walk from robarts. The Dan Dan Noodles at Sunny’s Chinese is very popular online but the Dan Dan noodles here are superior.</p>
+
           </div>
 
           <div *ngIf="articleId === 'code-camp'">

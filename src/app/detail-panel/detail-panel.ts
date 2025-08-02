@@ -17,41 +17,70 @@ import { CommonModule } from '@angular/common';
 
       <div
         style="position: fixed; top: 0; right: 0; height: 100%; z-index: 50; padding: 20px; overflow-y: auto;"
-        class="w-1/2 bg-violet-100"
+        class="w-1/2 bg-violet-100 "
       >
         <!-- Close Button -->
-        <button
-          (click)="closePanel()"
-          style="position: absolute; top: 10px; right: 10px; font-size: 24px; cursor: pointer; background: none; border: none;"
-          
-        >
-          &times;
-        </button>
+        <div class="flex justify-end relative px-10">
+          <div class="absolute fixed">
+          <button
+            (click)="closePanel()"
+            class="text-indigo-800 flex-grow text-5xl"
+          >
+            &times;
+          </button>
+          </div>
+        </div>
 
         <!-- Content Area -->
-        <div style="padding-top: 30px;">
+        <div class="serif-text py-5 mt-6 px-10">
 
           <div *ngIf="articleId === 'graduated'">
             <h2>Graduated!</h2>
             <p>Now that I’m done with Computer Engineering and it’s summer and the UofT Campus looks beautiful I want to take a moment to reflect on the places and moments that I cherish most from my five years here.</p>
 
+            <div class="flex justify-center">
+              <img class="flex-1 h-64 object-cover" src="/assets/knox-college-outside.jpeg" alt="My family and I outside Knox College Library">
+              <img class="flex-1 h-64 object-cover" src="/assets/knox-college-inside.jpeg" alt="Columns inside of Kox Library">
+            </div>
             <h3>Favourite library: Knox College Library</h3>
             <p>Although technically not a UofT library, it’s got a beautiful hall right next to king’s college circle with stained glass, antique desk lamps, and high chairs.</p>
             
             <h3>Favourite Classes I Took:</h3>
+            <div class="flex justify-center">
+              <img class="flex-1 w-full object-contain" src="/assets/planetmov-3.gif" alt="Computer graphics shader pipeline coursework">
+            </div>
             <p>Computer Graphics taught by David Levin and Alec Jacobson</p>
+            <div class="flex justify-center">
+              <img class="flex-1 w-full object-contain" src="/assets/dsp-lec-notes.jpeg" alt="Digital Signal Processing Notes">
+            </div>
             <p>Digital Signal Processing by Wei Yu. I also had the best TA during my time there called Aaron.</p>
             
+            <div class="flex justify-center">
+              <img class="flex-1 h-64 object-contain" src="/assets/galbraith-transmission-lab.jpeg" alt="Transmission line labe for Fields and Waves">
+              <img class="flex-1 h-64 object-contain" src="/assets/galbraith-maia.jpeg" alt="Baby picture of me and Maia in Galbraith">
+            </div>
             <h3>Eng Building I Spent the Most Time In: Galbraith</h3>
             <p>Most lectures and almost ALL upper year labs were here.</p>
             
+            <div class="flex justify-center">
+              <img class="flex-1 h-64 object-cover" src="/assets/kelly-zebra-rainbow.jpeg" alt="Rainbow crosswalk outside Kelly in June">
+              <img class="flex-1 h-64 object-cover" src="/assets/kelly-outside.jpeg" alt="Outside Kelly Library">
+            </div>
             <h3>Library I Spent the Most Time In: St Mike's Kelly Library</h3>
             <p>Kelly was across the street from where I lived so it was too convenient to go there despite the fact it is probably the university’s ugliest brutalist library beating out Robarts. Here is an article from 2022 that commemorates the time it became a film set for The Handmaid’s Tale around the time of midterms for that semester. </p>
             <a href="https://www.boundarynews.com/post/kelly-library-deemed-too-depressing-for-handmaid-s-tale-location">Kelly Library Deemed "Too Depressing" for Handmaid’s Tale Location</a>
           
+            <div class="flex justify-center">
+              <img class="flex-1 w-full object-cover" src="/assets/prefetcher-fail.jpg" alt="">
+            </div>
             <h3>Hardest Class I Took:</h3>
             <p>Computer Architecture taught by Mark Jeffrey</p>
             
+            <div class="flex justify-center">
+              <img class="flex-1 h-64 object-contain" src="/assets/vic-snow.jpeg" alt="Victoria College in the snow">
+              <img class="flex-1 h-64 object-cover" src="/assets/vic-arbor.jpeg" alt="Victoria College in summer">
+              <img class="flex-1 h-64 object-cover" src="/assets/vic-tree.jpeg" alt="Victoria College in spring">
+            </div>
             <h3>Favourite Quad: Victoria College</h3>
             <p>It became a routine to pick up a latte and sit under the ivy arbor. it’s especially beautiful in the spring and summer.</p>
           
@@ -61,35 +90,33 @@ import { CommonModule } from '@angular/common';
           </div>
 
           <div *ngIf="articleId === 'code-camp'">
-            <img src="/assets/code-camp.gif" alt="HER CODE CAMP" />
-            <h2>joined her code camp as head of logistics</h2>
-            <p>
-              Taking on the role of Head of Logistics for HER CODE CAMP was an incredibly rewarding experience. This initiative is dedicated to empowering women in technology, and my role involved coordinating all event logistics, managing resources, and ensuring a seamless and inspiring experience for all participants.
-            </p>
+            <p>After finishing my eng studies I was looking to a join a women in STEM organization. I reached out to Joanna Pineda at HER CODE CAMP in February who is partnering with Ontario’s Pathway to Education to run their workshop this year! The mission of HER CODE CAMP is unique in that it offers the opportunity to build a project in six weeks to students from underserved communities — the sort of high school kids who don’t have access to a CS class or club through their school.</p>
+            <p>The coolest thing is that the participants get to keep the laptops we provide them in class once they complete their project. I’m happy to be supporting this valuable initiative as Head of Logistics. My main goal is to secure sponsorships before the workshop begins in October. </p>
+            <p>If you think you or your company could support in any way please contact me! </p>
+            <p>hercodecamp&#64;gmail.com</p>
           </div>
 
           <div *ngIf="articleId === 'siggraph'">
-            <img src="/assets/siggraph2025.png" alt="SIGGRAPH 2025" />
-            <h2>going to vancouver for siggraph 2025</h2>
-            <p>
-              I'm excited to be a student volunteer at SIGGRAPH 2025 in Vancouver for the third and final time! It's an incredible opportunity to engage with cutting-edge computer graphics, interactive techniques, and network with leading professionals in the field. Each year brings new insights and inspiration.
-            </p>
+            <p>Finally, SIGGRAPH comes to Canada!!!!!!!!!! I’m ecstatic to be going back again this year and a little sad that this is my last time as a Student Volunteer. </p>
+            <p>In previous years my focus was a little scattered since I was entertaining the idea of grad school. I’ll be going back to the WIGGRAPH Researcher’s luncheon and support the people from the DGP Lab at the fast forward and technical papers. This year I’m prioritizing the production sessions. Specifically:</p>
+            <li>
+              <ul>Developing the Stylized World of The Wild Robot (I’ll fight for a seat if I have to)</ul>
+              <ul>Superman: Harnessing Numeric Power for Cinematic Magic</ul>
+              <ul>A Journey through Dystopia: The Last of Us</ul>
+              <ul>Sand, Light, and Holograms: ImageEngine’s VFX in Dune Prophecy</ul>
+            </li>
+            <p>I’m looking forward to the animation festival the most! Honestly, can’t believe this conference is real still. </p>
           </div>
 
           <div *ngIf="articleId === 'superhost'">
-            <img src="/assets/rosamanda.png" alt="Airbnb Superhost" />
-            <h2>became an airbnb superhost</h2>
-            <p>
-              Achieving Superhost status on Airbnb within the first five months of operating was a proud moment! This recognition reflects my commitment to providing exceptional guest experiences, maintaining high standards of hospitality, and ensuring comfortable stays for travelers.
-            </p>
+            <p>When my mom decided to turn our house into an Airbnb, she told me she wanted me to handle everything on the platform. We compiled together pictures and crafted the description of our home in English and Spanish to go live with the listing. We anxiously waited for our first guest, it was February which isn’t a very busy month for tourism — especially in El Progreso which is the fourth largest city in Honduras. </p>
+            <p>Initially we got some inquiries to handle business off the platform, which felt too risky for our taste. Nicholle from La Ceiba was our first five star review:</p>
+            <p>I haven’t underestimated the power of reviews since. It has been steadily busy all spring and summer, although we did see a dip during the most politically uncertain times. The gamified features of the platform on the host side make the process kind of fun. We’re superhost status now and it is so fulfilling to see our guests’ response on their stays: </p>
+            <p>I’m also really proud of my response stats: </p>
           </div>
 
           <div *ngIf="articleId === 'first-aid'">
-            <img src="/assets/toronto-first-aid.png" alt="Toronto First Aid" style="width: 100%; height: auto; display: block;" />
-            <h2>administrator for toronto first aid</h2>
-            <p>
-              I started as an administrator for Toronto First Aid, where I'm focusing on bridging language gaps and fostering community safety through accessible first aid training. It's a rewarding role that combines my organizational skills with a passion for community service and public health.
-            </p>
+            <p>This opportunity popped up part-time while I still find a full-time role. I thought it’d be a good idea to develop some more customer service experience, but mainly I’m learning how a small business is administered and operated. I want to develop my art practice and someday get to the point where I can sell originals and prints. Handling the orders once they come in is making me feel more comfortable about the idea of opening an e-shop in a couple years time. </p>
           </div>
 
           <div *ngIf="!articleId">

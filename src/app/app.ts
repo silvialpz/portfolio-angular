@@ -27,7 +27,7 @@ interface Article {
           <a class="text-5xl font-extrabold" style="text-transform: uppercase;" href="/">SILVIA LOPEZ</a>
           <div class="flex-grow justify-around flex">
             <a class="sans-serif-subtitle-text">Resume</a>
-            <button href="" class="bg-indigo-800 sans-serif-subtitle-text rounded-full px-2 text-violet-50">Contact</button>
+            <a class="sans-serif-subtitle-text">Contact</a>
           </div>
         </header>
       <!-- This will be the main container for your two columns -->

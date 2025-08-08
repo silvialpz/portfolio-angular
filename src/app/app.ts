@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { BigUpdateComponent } from './big-update/big-update';
 import { SmallUpdateComponent } from './small-update/small-update';
 import { DetailPanelComponent } from './detail-panel/detail-panel';
@@ -16,7 +15,7 @@ interface Article {
 @Component({
   selector: 'app-root',
   standalone: true, // Important: Makes this component self-contained
-  imports: [RouterOutlet, BigUpdateComponent, SmallUpdateComponent, DetailPanelComponent, BigProjectComponent, LabelComponent], // RouterOutlet is typically used for routing, keep it for now.
+  imports: [BigUpdateComponent, SmallUpdateComponent, DetailPanelComponent, BigProjectComponent, LabelComponent], // RouterOutlet is typically used for routing, keep it for now.
   template: `
     <main class="min-h-screen p-8">
       <header class="mb-1 text-center flex items-end justify-between text-lg">

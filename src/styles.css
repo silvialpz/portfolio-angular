@@ -25,6 +25,13 @@ font-style: normal;
   font-style: normal;
 }
 
+.serif-heading {
+  font-family: alegreya, serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: var(--text-lg);
+}
+
 .sans-serif-subtitle-text {
 font-family: source-code-pro, monospace;
 font-weight: 600;

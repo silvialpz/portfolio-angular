@@ -25,7 +25,7 @@ interface Article {
           </div>
           <a class="text-5xl font-extrabold" style="text-transform: uppercase;" href="/">SILVIA LOPEZ</a>
           <div class="flex-grow justify-around flex">
-            <a class="sans-serif-subtitle-text">Resume</a>
+            <a class="sans-serif-subtitle-text" href="/assets/Silvia_Lopez_July_2025_Resume_TD.pdf" target="_blank">Resume</a>
             <a class="sans-serif-subtitle-text">Contact</a>
           </div>
         </header>
@@ -110,7 +110,7 @@ interface Article {
           <div id="horizontalScrollContainer" class="flex overflow-x-auto whitespace-nowrap flex-grow">
 
             <div class="w-80 p-4 shrink-0 whitespace-normal h-min">
-              <p class="text-lg leading-relaxed">I love drawing. I have been developing my skills through youtube videos and self study passionately. Here's what I have been working on.</p>
+              <p class="text-lg leading-relaxed">I love drawing. Here's what I have been working on.</p>
               <p class="text-right pt-5 sans-serif-subtitle-text">>>>>>>>>>>>></p>
             </div>
             <div class="inline-block w-full md:w-[80vw] lg:w-[50vw] h-full rounded-lg ast:mr-0 align-top shrink-0">

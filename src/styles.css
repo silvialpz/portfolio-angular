@@ -38,6 +38,12 @@ font-weight: 600;
 font-style: normal;
 }
 
+.sans-serif-small-text {
+font-family: source-code-pro, monospace;
+font-weight: 400;
+font-style: italic;
+}
+
 .sans-serif-label-text {
 font-family: source-code-pro, monospace;
 font-weight: 900;

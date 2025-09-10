@@ -105,10 +105,9 @@ export class ArtSection implements AfterViewInit {
     console.log('Wheel event fired. deltaY:', event.deltaY);
     const container = this.scrollContainer.nativeElement;
     const isAtStart = container.scrollLeft === 0 && event.deltaY < 0;
-    const isAtEnd = Math.ceil(container.scrollLeft + container.clientWidth) >= container.scrollWidth && event.deltaY > 0;
     const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.scrollHeight;
     
-    if (isAtStart || isAtEnd) {
+    if (isAtStart) {
       // Do nothing, let the default vertical scroll happen.
       return;
     }

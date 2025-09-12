@@ -26,7 +26,7 @@ interface Article {
           </div>
           <a class="text-5xl font-extrabold" style="text-transform: uppercase;" href="/">SILVIA LOPEZ</a>
           <div class="flex-grow justify-around flex">
-            <a class="sans-serif-subtitle-text" href="/assets/Silvia_Lopez_July_2025_Resume_TD.pdf" target="_blank">Resume</a>
+            <a class="sans-serif-subtitle-text" href="/assets/Silvia_Lopez_TD_Sep2025.pdf" target="_blank">Resume</a>
             <a class="sans-serif-subtitle-text" href="https://bento.me/silvialopez" target="_blank">Contact</a>
           </div>
         </header>

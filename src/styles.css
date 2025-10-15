@@ -13,6 +13,13 @@ body {
   -moz-osx-font-smoothing: grayscale; /* Smoother font rendering */
 }
 
+.goldich-title-text {
+font-family: "goldich", sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+
+
 .serif-title-text {
 font-family: alegreya, serif;
 font-weight: 700;

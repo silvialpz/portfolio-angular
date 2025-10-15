@@ -160,6 +160,57 @@ import { CommonModule, DOCUMENT } from '@angular/common';
             <p>Please select an article to view its details.</p>
           </div>
 
+          <div *ngIf="articleId === 'unreal-workshop'" class="flex flex-col gap-4">
+            <img src="/assets/output.gif" alt="">
+            <p>boo!</p>
+          </div>
+
+          <div *ngIf="articleId === 'equinox'" class="flex flex-col gap-4">
+            <p>boo!</p>
+          </div>
+
+          <div *ngIf="articleId === 'ctrl-alt-slay'" class="flex flex-col gap-4">
+            <p>boo!</p>
+          </div>
+
+          <div *ngIf="articleId === 'learning-french'" class="flex flex-col gap-4">
+            <p>There are THIRTEEN vowel sounds in French. </p>
+            <img src="/assets/french-vowel-sounds.jpeg" alt="French vowel sounds">
+            <p>The [u] sound in bonjour is not the same as the [y] sound in salut.</p>
+            <p>Coming from Spanish where there are five vowels that all directly correspond to a single vowel letter, that’s really really confusing and convoluted. I am still working really hard to train my ear to listen for <em>le</em> instead of <em>lu</em>. </p>
+            <img class="w-1/2" src="/assets/french-nasal-vowels.jpeg" alt="French nasal vowels">
+            <p>And then there are the nasal vowels… they’re probably not that hard to pronounce but I just feel very silly being so nasally so I don’t full send it. </p>
+            <p>I've always been told that learning french as a fluent English and Spanish speaker would be easy. French is still a really weird language and sometimes my knowledge of Spanish is why I get frustrated. </p>
+            <p><u>Nombres:</u> <br> In Spanish this means names, and numbers is <em>números</em> <br><em>Numero</em> in french means <em>número</em>, but i don’t know why <em>nombre</em> is <em>pre-nom</em></p>
+            <p>Speaking of numbers, I don’t like the break in parallels with these: <br> onze — once <br>douze — doce <br>treize — trece <br> quatorze — catorce <br> quinze — quince <br> <strong>seize — dieciseis ...I feel the need to say <em>dix-six</em> </strong> <br> dix-sept — diecisiete</p>
+            <p>Stay tuned for other notes on French as i strive for level A1 😊</p>
+          </div>
+
+          <div *ngIf="articleId === 'life-drawing'" class="flex flex-col gap-4">
+            <p>I went to my first life drawing session in July unprepared. I brought a small sketchbook with thick mixed media paper that I had had for years and hadn’t filled out. Thankfully, I was there with my friend Gabrielle, who happened to have an extra newsprint pad that she kindly gave to me. There were desks, as well as horse benches and easels. I clipped my new paper pad to a board and then we drew the model for three hours.</p>
+            <p>If you’re unfamiliar, models hold poses for a maximum of fifteen minutes. Initially, we do plenty of quick one-minute poses. Then, the model starts holding the poses for longer, and by then, you’re already warmed up to try to get the right form and details.</p>
+            <p>I like these drawing sessions a lot. I like working on a larger surface than I’ve ever drawn before. I like moving on from one pose to the next without a lot of commitment. I like hearing the scratching of paper all around me. There are usually around 15-20 artists who attend the drawing sessions.</p>
+            <p>My dad bought me this set of graphite pencils around ten years ago. They’ve traveled with me to high school competitions, to university in Canada, to visits back home, and even to vacations in Europe — and yet you can see I haven’t worn them down. They’re what I am choosing to draw with now for sentimental, economic, and practical reasons — mainly that graphite doesn’t leave my hands and clothes covered in dust the way charcoal does.</p>
+            <img src="/assets/life-drawing-1.jpeg" alt="Pencils used for life drawing">
+            <p>Here are a few poses that I think turned out well. </p>
+            <p><em>Note: These drawings feature nude models as part of traditional life drawing practice.</em></p>
+            <hr>
+            <p><strong><u>July 13, 2025</u></strong> My first class.</p>
+            <img src="/assets/life-drawing-2.jpeg" alt="Woman lying down sideways covering her face">
+            <img src="/assets/life-drawing-3.jpeg" alt="Woman lying down with hoop looking up">
+            <img src="/assets/life-drawing-4.jpeg" alt="Woman sitting down covering her face">
+            <img src="/assets/life-drawing-5.jpeg" alt="Woman sitting down with hands on a stool">
+            <hr>
+            <p><strong><u>October 5, 2025</u></strong> Couldn't stay very long because my right shoulder hurt really bad.</p>
+            <img src="/assets/life-drawing-6.jpeg" alt="Practice figures">
+            <img src="/assets/life-drawing-7.jpeg" alt="Woman resting her hand on her chin">
+            <hr>
+            <p><strong><u>October 12, 2025</u></strong> The model was wearing elf ears, in the spirit of spooky season I think, and it gave my drawings a very magical look.</p>
+            <p>I was also sitting at a desk and drawing in a smaller scale. I am more used to that but I'll go buy a new pad soon to go back to drawing bigger.</p>
+            <img src="/assets/life-drawing-8.jpeg" alt="Elf sitting down">
+            <img src="/assets/life-drawing-9.jpeg" alt="Elf in three different poses">
+          </div>
+
         </div>
       </div>
     </ng-container>

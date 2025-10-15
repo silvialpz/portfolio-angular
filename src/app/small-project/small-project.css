@@ -1,0 +1,28 @@
+h3 {
+  margin-top: 1.2em; /* Space above headings */
+  font-size: larger;
+}
+
+ul {
+  padding-left: 1.2em; /* Indent list items */
+  margin: 0.5em 0; /* Add vertical spacing */
+  list-style-type: disc; /* Use disc bullets */
+  /* space in the y direction between list elements */
+}
+
+li {
+  margin-bottom: 0.3em; /* Space between list items */
+}
+
+.link {
+  color: rgb(0, 82, 247); /* Inherit text color */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+  color: rgb(0, 0, 200); /* Darker blue on hover */
+}
+
+p, h3, ul, li {
+  margin: 1em 10em; /* Add vertical spacing */
+}

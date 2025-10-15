@@ -83,7 +83,7 @@ import { CommonModule } from '@angular/common';
           <li><strong class="goldich-title-text">Goldich</strong> — this is my big, beautiful font for headings. It’s what I settled for since I couldn’t use Wired Display. I’m really happy with how geometric it is. <br> The <strong class="text-2xl goldich-title-text">S</strong> and <strong class="text-2xl goldich-title-text">Z</strong> in my name both have these sharp, triangular terminals that balance each other nicely.</li>
         </ul>
 
-        <p>These are all available for free on Adobe Fonts, which is what I used to embed these fonts into my app.</p>
+        <p>These are all available for free on Adobe Fonts, which is what I used to embed them into my app.</p>
 
         <p>Next, I needed project cards. The most important part of a portfolio is the projects you showcase. I was scrolling through the Apple website one day, and I really liked this type of container with a large image and small text next to it.</p>
 
@@ -103,7 +103,7 @@ import { CommonModule } from '@angular/common';
           <li>I like how these contact links are styled/embedded in <a class="link" href="http://bento.me" target="_blank" rel="noopener noreferrer">bento.me</a> — I want to have something like that integrated in the website when you hit the CONTACT link.</li>
           <li>Learn more about scalable Angular project architecture. In order to get started, I used this link, and I remember them using mostly components and interfaces. I want to organize my project files by modules and/or features.</li>
           <li>Tag projects by skill, have options to sort and filter them. Then I could probably control what version of my website recruiters see by sending them a different link.</li>
-          <li>Add a lightbox feature for all images</li>
+          <li>Add a lightbox feature for all images.</li>
           <li>Search bar.</li>
         </ul>
       </div>

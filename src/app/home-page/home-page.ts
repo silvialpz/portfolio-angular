@@ -63,13 +63,13 @@ interface Article {
                 (click)="openDetailPanel({ id: 'code-camp' })"
               ></app-big-update>
 
-              <!-- <app-big-update
+              <app-big-update
                 title=""
                 description="Discovering Houdini 21 at SideFX's Equinox Event in Toronto"
                 imageUrl="/assets/houdini.png"
                 (click)="openDetailPanel({ id: 'equinox' })"
               >
-              </app-big-update> -->
+              </app-big-update>
           </div>
 
           <div class="md:col-span-4">
@@ -138,7 +138,7 @@ interface Article {
       <section id="projects">
         <app-label labelText="Projects"></app-label>
         <app-small-project></app-small-project>
-        <app-big-project id="projectSection"></app-big-project>
+        <app-big-project id="capstone"></app-big-project>
       </section>
 
       <section id="artSection" class="h-[90vh] flex flex-col">

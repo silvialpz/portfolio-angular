@@ -166,7 +166,18 @@ import { CommonModule, DOCUMENT } from '@angular/common';
           </div>
 
           <div *ngIf="articleId === 'equinox'" class="flex flex-col gap-4">
-            <p>boo!</p>
+            <p>As part of my goal of becoming an Assistant Technical Director, I’ve been meaning to learn a digital content creation (DCC) software. It’s been an intimidating task for a while, so it felt serendipitous when SideFX announced a free three-day event packed with workshops.</p>
+            <img src="/assets/equinox-selfie.png" alt="Equinox selfie">
+            <p>The first day offered an introduction to Houdini, their 3D animation software. The tickets were already sold out by the time I heard about it, but luckily my friend Rob knew Debra Isaac, who happened to be teaching the class. With Houdini pre-installed on our laptops, we were ready to dive in.</p>
+            <p>That first session was my introduction to what people call a node-based, procedural workflow—and I really liked it. Imagine that Scratch had a dark-mode baby with Notion—that’s what using Houdini felt like to me. We ended the day making a UFO abducting the test geometry model, Tommy.</p>
+            <img src="/assets/equinox-ufo-tommy.png" alt="Equinox UFO abducting Tommy">
+            <p>The second day was a rigging workshop led by Carlos Valcarcel, focusing on APEX graphs. They’re designed to be artist-friendly, and their main advantage seems to be how modular and “non-destructive” they are. At first glance, it’s a bit overwhelming, but I can see how powerful it can be once you get the hang of it. This was the demo that included a facial rig—I’ll be attempting to add the eyebrows sometime soon.</p>
+            <img src="/assets/equinox-outback-rig.png" alt="">
+            <p>On the final day, I attended a Copernicus workshop—what all the SideFX people just call COPS. We built a few solvers, including a fluid one and a chemical reaction one. This is a screen recording of the viewpoert on my Macbook Air which is why it looks slow.</p>
+            <div class="flex flex-row">
+              <img class="w-1/2 object-contain" src="/assets/equinox-fluid-solver.gif" alt="Fluid solver in Houdini">
+              <img class="w-1/2 object-contain" src="/assets/equinox-chemical-reaction.gif" alt="Chemical reaction solver in Houdini">
+            </div>
           </div>
 
           <div *ngIf="articleId === 'ctrl-alt-slay'" class="flex flex-col gap-4">

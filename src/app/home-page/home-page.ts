@@ -123,7 +123,7 @@ interface Article {
 
         <div class="flex flex-row justify-between">
           <div>
-            <p>Last Updated: October 16, 2025</p>
+            <p class="sans-serif-label-text">Last Updated: October 16, 2025</p>
           </div>
           <div class="flex flex-row items-center space-x-0.5 justify-end">
             <img src="/assets/archive-icon.svg" alt="Archive Icon" class="w-5 h-5"/>

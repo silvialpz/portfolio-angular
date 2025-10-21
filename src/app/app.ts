@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-interface Article {
-  // title: string;
-  // imageUrl: string;
-  // description: string;
-  id: string;
-}
 
 @Component({
   selector: 'app-root',
@@ -22,19 +16,5 @@ interface Article {
   styleUrl: './app.css' // Ensure this points to your main CSS file
 })
 export class App {
-  title = 'portfolio';
-
-  isDetailPanelOpen: boolean = false;
-  selectedArticleId: string | null = null;
-
-  openDetailPanel(article: Article) {
-    this.isDetailPanelOpen = true;
-    this.selectedArticleId = article.id;
-  }
-
-  closeDetailPanel() {
-    this.isDetailPanelOpen = false;
-    this.selectedArticleId = null;
-  }
 
 }

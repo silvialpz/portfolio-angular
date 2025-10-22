@@ -76,7 +76,7 @@ interface Article {
             <app-big-update
                 title="Completed My Computer Engineering Degree at UofT"
                 imageUrl="/assets/graduated.jpg"
-                description="Now an aspiring Technical Director seeking opportunities in the film industry"
+                description="Now seeking a full stack development role"
                 (click)="openDetailPanel({ id: 'graduated' })"
               ></app-big-update>
           </div>

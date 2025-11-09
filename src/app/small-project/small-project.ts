@@ -101,7 +101,7 @@ import { CommonModule } from '@angular/common';
           <li>Create a database for the personal updates section, and include a paginated archive.</li>
           <li>I want to include videos and more media files. Will this slow down the app? Should I add a loading screen? How do you make beautiful websites fast?</li>
           <li>I like how these contact links are styled/embedded in <a class="link" href="http://bento.me" target="_blank" rel="noopener noreferrer">bento.me</a> — I want to have something like that integrated in the website when you hit the CONTACT link.</li>
-          <li>Learn more about scalable Angular project architecture. In order to get started, I used this link, and I remember them using mostly components and interfaces. I want to organize my project files by modules and/or features.</li>
+          <li>Learn more about scalable Angular project architecture. In order to get started, I used <a class="link" href="https://www.youtube.com/playlist?list=PL1w1q3fL4pmj9k1FrJ3Pe91EPub2_h4jF" target="_blank">this tutorial</a>, and I remember them using mostly components and interfaces. I want to organize my project files by modules and/or features.</li>
           <li>Tag projects by skill, have options to sort and filter them. Then I could probably control what version of my website recruiters see by sending them a different link.</li>
           <li>Add a lightbox feature for all images.</li>
           <li>Search bar.</li>

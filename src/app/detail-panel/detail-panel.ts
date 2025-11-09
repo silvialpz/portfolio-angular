@@ -173,7 +173,7 @@ import { CommonModule, DOCUMENT } from '@angular/common';
             <img src="/assets/equinox-ufo-tommy.png" alt="Equinox UFO abducting Tommy">
             <p>The second day was a rigging workshop led by Carlos Valcarcel, focusing on APEX graphs. They’re designed to be artist-friendly, and their main advantage seems to be how modular and “non-destructive” they are. At first glance, it’s a bit overwhelming, but I can see how powerful it can be once you get the hang of it. This was the demo that included a facial rig—I’ll be attempting to add the eyebrows sometime soon.</p>
             <img src="/assets/equinox-outback-rig.png" alt="">
-            <p>On the final day, I attended a Copernicus workshop—what all the SideFX people just call COPS. We built a few solvers, including a fluid one and a chemical reaction one. This is a screen recording of the viewpoert on my Macbook Air which is why it looks slow.</p>
+            <p>On the final day, I attended a Copernicus workshop—what all the SideFX people just call COPS. We built a few solvers, including a fluid one and a chemical reaction one. This is a screen recording of the viewport on my Macbook Air which is why it looks slow.</p>
             <div class="flex flex-row">
               <img class="w-1/2 object-contain" src="/assets/equinox-fluid-solver.gif" alt="Fluid solver in Houdini">
               <img class="w-1/2 object-contain" src="/assets/equinox-chemical-reaction.gif" alt="Chemical reaction solver in Houdini">

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { BigUpdateComponent } from '../big-update/big-update';
 import { SmallUpdateComponent } from '../small-update/small-update';
 import { DetailPanelComponent } from '../detail-panel/detail-panel';
@@ -6,7 +6,9 @@ import { BigProjectComponent } from '../big-project/big-project';
 import { LabelComponent } from '../label/label';
 import { ArtSection } from '../art-section/art-section';
 import { SmallProject } from '../small-project/small-project';
+import { ContactSection } from '../contact-section/contact-section';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 interface Article {
   // title: string;
@@ -17,10 +19,10 @@ interface Article {
 
 @Component({
   selector: 'app-home-page',
-  imports: [BigUpdateComponent, SmallUpdateComponent, DetailPanelComponent, BigProjectComponent, LabelComponent, ArtSection, SmallProject, RouterModule],
+  imports: [CommonModule, BigUpdateComponent, SmallUpdateComponent, DetailPanelComponent, BigProjectComponent, LabelComponent, ArtSection, SmallProject, ContactSection, RouterModule],
   template: `
-    <main class="min-h-screen p-8">
-      <header class="mb-1 text-center flex items-end justify-between text-lg">
+    <main class="min-h-screen ">
+      <header class="mb-1 text-center flex items-end justify-between text-lg px-8 pt-8">
           <div class="flex justify-around flex-grow">
             <a href="#projects" class="sans-serif-subtitle-text">Projects</a>
             <a href="#artSection" class="sans-serif-subtitle-text">Art</a>
@@ -28,11 +30,24 @@ interface Article {
           <a class="text-5xl font-extrabold" style="text-transform: uppercase;" href="/">SILVIA LOPEZ</a>
           <div class="flex-grow justify-around flex">
             <a class="sans-serif-subtitle-text" href="/assets/Silvia_Lopez_TD_Sep2025.pdf" target="_blank">Resume</a>
-            <a class="sans-serif-subtitle-text" href="https://bento.me/silvialopez" target="_blank">Contact</a>
+            <a
+              class="sans-serif-subtitle-text cursor-pointer"
+              (click)=toggle()
+              [attr.aria-expanded]="isContactOpen"
+            >
+              Contact
+            </a>
           </div>
         </header>
-      <!-- This will be the main container for your two columns -->
-      <div class="mx-auto w-full  pb-5">
+
+      <!-- Inline contact drawer (animates open/closed) -->
+       <div class="contact-container" [class.open]="isOpen()">
+        <app-contact-section class="content"></app-contact-section>
+       </div>
+        
+
+      <div class="px-8 pb-8">
+        <div class="about-me mx-auto w-full  pb-5 ">
 
         <div class="grid grid-cols-1 md:grid-cols-8 gap-3 mt-5">
           <!-- 6-Column Banner (Wired-like label) -->
@@ -56,12 +71,7 @@ interface Article {
                 (click)="openDetailPanel({ id: 'ctrl-alt-slay' })"
               ></app-big-update> -->
 
-              <app-big-update
-                title=""
-                imageUrl="/assets/code-camp.gif"
-                description="Joined HER CODE CAMP as Head of Logistics"
-                (click)="openDetailPanel({ id: 'code-camp' })"
-              ></app-big-update>
+              
 
               <app-big-update
                 title=""
@@ -84,6 +94,15 @@ interface Article {
           <!-- Right Column: Small Updates (General Life) -->
           <div class="md:col-span-2">
             <!-- Small update components will go here -->
+
+            <!-- <app-small-update
+              title="Volunteering at the Women in Film & Television Crystal Awards Gala"
+              imageUrl="/assets/wift-gala.png"
+              description=""
+              (click)="openDetailPanel({ id: 'wift-gala' })"
+            >
+            </app-small-update> -->
+
             <app-small-update
               title="Chronicling My Struggles with the Nasal Vowels as I Learn French"
               imageUrl="/assets/learning-french.png"
@@ -123,7 +142,7 @@ interface Article {
 
         <div class="flex flex-row justify-between">
           <div>
-            <p class="sans-serif-label-text">Last Updated: October 16, 2025</p>
+            <p class="sans-serif-label-text">Last Updated: November 30, 2025</p>
           </div>
           <div class="flex flex-row items-center space-x-0.5 justify-end">
             <img src="/assets/archive-icon.svg" alt="Archive Icon" class="w-5 h-5"/>
@@ -145,6 +164,12 @@ interface Article {
         <app-label labelText="Art"></app-label>
         <app-art-section></app-art-section>
       </section>
+      <p class="sans-serif-subtitle-text">&copy; Silvia Carolina Lopez Portillo</p>
+      </div>
+      <!-- This will be the main container for your two columns -->
+      
+
+      
     </main>
 
     <app-detail-panel
@@ -159,6 +184,7 @@ interface Article {
 export class HomePage {
   isDetailPanelOpen: boolean = false;
   selectedArticleId: string | null = null;
+  isContactOpen = false;
 
   openDetailPanel(article: Article) {
     this.isDetailPanelOpen = true;
@@ -168,5 +194,10 @@ export class HomePage {
   closeDetailPanel() {
     this.isDetailPanelOpen = false;
     this.selectedArticleId = null;
+  }
+
+  isOpen = signal(false);
+  toggle() {
+    this.isOpen.update((isOpen) => !isOpen);
   }
 }

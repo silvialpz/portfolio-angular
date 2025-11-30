@@ -1,0 +1,27 @@
+.contact-container {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 1s;
+  width: 100vw;
+}
+
+.contact-container.open {
+  grid-template-rows: 1fr;
+  width: 100vw;
+}
+
+
+.contact-container .content {
+  min-height: 0;
+  transition: visibility 1s;
+  visibility: hidden;
+  font-weight: bold;
+  font-size: 20px;
+  overflow: hidden;
+  width: 100vw;
+}
+.contact-container.open .content {
+  visibility: visible;
+  width: 100vw;
+}

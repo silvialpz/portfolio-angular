@@ -20,6 +20,14 @@ interface Article {
       <div class="flex justify-center">
 
         <div class="w-1/4">
+          <app-big-update
+            title=""
+            imageUrl="/assets/code-camp.gif"
+            description="Joined HER CODE CAMP as Head of Logistics"
+            (click)="openDetailPanel({ id: 'code-camp' })"
+          ></app-big-update>
+
+          <hr class="">
 
           <app-small-update
             title="Bridging Language Gaps as an Administrator for Toronto First Aid"

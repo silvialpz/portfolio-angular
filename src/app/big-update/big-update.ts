@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common'; // Important for standalone comp
   standalone: true, // This component is self-contained
   imports: [CommonModule], // Common Angular directives
   template: `
-    <article class="p-2 rounded-lg overflow-hidden">
+    <article class="p-2 rounded-lg overflow-hidden cursor-pointer">
       <img [src]="imageUrl" alt="{{ title }}" class="w-full rounded-md" />
       <h3 class="text-5xl font-bold py-1">{{ title }}</h3>
       <p class="text-lg/5 mb-1 sans-serif-subtitle-text">{{ description }}</p>

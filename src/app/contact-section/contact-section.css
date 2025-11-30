@@ -1,0 +1,6 @@
+.bento-box {
+  border: 0.5px solid oklch(39.8% 0.195 277.366);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

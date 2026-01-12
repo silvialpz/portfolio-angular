@@ -29,7 +29,7 @@ interface Article {
           </div>
           <a class="text-5xl font-extrabold" style="text-transform: uppercase;" href="/">SILVIA LOPEZ</a>
           <div class="flex-grow justify-around flex">
-            <a class="sans-serif-subtitle-text" href="/assets/Silvia_Lopez_TD_Sep2025.pdf" target="_blank">Resume</a>
+            <a class="sans-serif-subtitle-text" href="/assets/Silvia_Lopez_Oct2025_PST.pdf" target="_blank">Resume</a>
             <a
               class="sans-serif-subtitle-text cursor-pointer"
               (click)=toggle()
@@ -112,10 +112,10 @@ interface Article {
             </app-small-update>
 
             <app-small-update
-              title="Chronicling My Struggles with the Nasal Vowels as I Learn French"
-              imageUrl="/assets/learning-french.png"
+              title="First Five Months of Hosting on Airbnb and I'm now a Superhost"
+              imageUrl="/assets/rosamanda.png"
               description=""
-              (click)="openDetailPanel({ id: 'learning-french' })"
+              (click)="openDetailPanel({ id: 'superhost' })"
             >
             </app-small-update>
 
@@ -128,10 +128,10 @@ interface Article {
             </app-small-update>
 
             <app-small-update
-              title="First Five Months of Hosting on Airbnb and I'm now a Superhost"
-              imageUrl="/assets/rosamanda.png"
+              title="Chronicling My Struggles with the Nasal Vowels as I Learn French"
+              imageUrl="/assets/learning-french.png"
               description=""
-              (click)="openDetailPanel({ id: 'superhost' })"
+              (click)="openDetailPanel({ id: 'learning-french' })"
             >
             </app-small-update>
 
@@ -184,7 +184,7 @@ interface Article {
 export class HomePage {
   isDetailPanelOpen: boolean = false;
   selectedArticleId: string | null = null;
-  isContactOpen = false;
+  isContactOpen: boolean = false;
 
   openDetailPanel(article: Article) {
     this.isDetailPanelOpen = true;

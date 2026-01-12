@@ -16,7 +16,8 @@ import { CommonModule, DOCUMENT } from '@angular/common';
 
       <div
         style="position: fixed; top: 0; right: 0; height: 100%; z-index: 50; padding: 20px; overflow-y: auto;"
-        class="w-1/2 bg-violet-100 "
+        class="w-1/2 bg-violet-100 detail-container"
+        [class.open]="isOpen"
       >
         <!-- Close Button -->
         <div class="flex justify-end relative px-10">
@@ -31,7 +32,7 @@ import { CommonModule, DOCUMENT } from '@angular/common';
         </div>
 
         <!-- Content Area -->
-        <div class="serif-text py-5 mt-6 px-15 leading-5">
+        <div class="serif-text py-5 mt-6 px-15 leading-5 detail-content">
 
           <div *ngIf="articleId === 'graduated'" class="flex flex-col gap-2">
             <p>Now that I’m done with Computer Engineering and it’s summer and the UofT Campus looks beautiful I want to take a moment to reflect on the places and moments that I cherish most from my five years here.</p>
@@ -124,6 +125,7 @@ import { CommonModule, DOCUMENT } from '@angular/common';
           </div>
 
           <div *ngIf="articleId === 'superhost'" class="flex flex-col gap-4">
+            <h3>July 3, 2025</h3>
             <div class="airbnb-embed-frame" data-id="1323510314811036135" data-view="home" data-hide-price="true" style="width: 450px; height: 300px; margin: auto;"><a href="https://www.airbnb.ca/rooms/1323510314811036135?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget">View On Airbnb</a><a href="https://www.airbnb.ca/rooms/1323510314811036135?guests=1&amp;adults=1&amp;s=66&amp;source=embed_widget" rel="nofollow">Home in El Progreso · ★5.0 · 3 bedrooms · 3 beds · 2.5 baths</a></div>
             <p>When we decided to turn our house into an Airbnb, I knew it would be up to me to handle everything on the platform. We compiled together pictures and crafted the description of our home in English and Spanish to go live with the listing. We anxiously waited for our first guest, it was February which isn’t a very busy month for tourism — especially in El Progreso which is the fourth largest city in Honduras. </p>
             <p>Initially we got some inquiries to handle business off the platform, which felt too risky for our taste. Nicholle from La Ceiba was our first five star review:</p>
@@ -190,17 +192,19 @@ import { CommonModule, DOCUMENT } from '@angular/common';
           </div>
 
           <div *ngIf="articleId === 'wift-gala'" class="flex flex-col gap-4">
+            <h3>November 25, 2025</h3>
             <img src="/assets/wift-gala-salon.jpeg" alt="WIFT Gala Salon">
-            <p>The Women in Film and Television’s Crystal Awards gala was the first time I really saw FASHION in Toronto; everyone looked fabulous. I was able to attend this special event because Abby Brockhouse, the WIFT events manager, put out a call for volunteers. I was a floater. So I rotated between being an attendant at the registration desk for a bit, a pathfinder, and a green room monitor.</p>
+            <p>The Women in Film and Television’s Crystal Awards gala was the first time I really saw FASHION in Toronto; everyone looked fabulous. I was able to attend this special event because <a href="https://www.linkedin.com/in/abigail-brockhouse-6a27758a/" style="text-decoration: underline;">Abby Brockhouse</a>, the WIFT events manager, put out a call for volunteers. I was a floater. So I rotated between being an attendant at the registration desk for a bit, a pathfinder, and a green room monitor.</p>
             <img src="/assets/wift-gala-me-green.jpeg" alt="WIFT Gala Me in the Green Room" class="w-1/2 mx-auto">
             <p>The honorees were awarded for creative excellence, innovation, business achievements, and mentorship. When they were introduced to go on stage, they played a prepared vignette video with talking heads from all their colleagues and mentees over the years, describing what made these women so amazing.</p>
-            <p>The most memorable parts of the event were definitely the beautifully prepared speeches by the nominees. I was able to listen to only a handful of the six women between my shifts. Sandie Maclean’s speech, receiving the special jury Distinction Award, was about how she broke into reporting in the 80’s—which was super funny. Annie Bradley, receiving the Mentorship Award, gave a very moving speech about her career: “Women need mentors and women need allies.”</p>
+            <p>The most memorable parts of the event were definitely the beautifully prepared speeches by the honorees. I was able to listen to only a handful of the six women between my shifts. Sandie Maclean’s speech, receiving the special jury Distinction Award, was about how she broke into reporting in the 80’s—which was super funny. Annie Bradley, receiving the Mentorship Award, gave a very moving speech about her career: “Women need mentors and women need allies.”</p>
             <p>It was delightful to meet others in Toronto pursuing careers in film &amp; TV. I also learned that it’s a volunteer community that comes back each year to support the event. The Fairmont Royal York was beautifully decorated for the holiday season, a very memorable venue.</p>
             <p>Here is a picture of the centerpiece flowers that I was able to take home after the event (featuring the TTC).</p>
             <img src="/assets/wift-gala-flowers.jpeg" alt="WiFT Gala Flower Centerpiece">
           </div>
 
           <div *ngIf="articleId === 'learning-french'" class="flex flex-col gap-4">
+            <p>J'ai commencé mon cours de français le trente de septembre du 2025. Je prends des notes.</p>
             <p>There are THIRTEEN vowel sounds in French. </p>
             <img src="/assets/french-vowel-sounds.jpeg" alt="French vowel sounds">
             <p>The [u] sound in bonjour is not the same as the [y] sound in salut.</p>

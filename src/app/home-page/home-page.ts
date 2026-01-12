@@ -80,13 +80,21 @@ interface Article {
                 (click)="openDetailPanel({ id: 'equinox' })"
               >
               </app-big-update>
+
+              <app-small-update
+              title="Making an Environment: My Render from an Unreal Engine Intro Workshop"
+              imageUrl="/assets/unreal-intro-workshop.png"
+              description=""
+              (click)="openDetailPanel({ id: 'unreal-workshop' })"
+            >
+            </app-small-update>
           </div>
 
           <div class="md:col-span-4">
             <app-big-update
                 title="Completed My Computer Engineering Degree at UofT"
                 imageUrl="/assets/graduated.jpg"
-                description="Now seeking a full stack development role"
+                description="Now seeking an entry level role animation/VFX"
                 (click)="openDetailPanel({ id: 'graduated' })"
               ></app-big-update>
           </div>
@@ -95,13 +103,13 @@ interface Article {
           <div class="md:col-span-2">
             <!-- Small update components will go here -->
 
-            <!-- <app-small-update
+            <app-small-update
               title="Volunteering at the Women in Film & Television Crystal Awards Gala"
               imageUrl="/assets/wift-gala.png"
               description=""
               (click)="openDetailPanel({ id: 'wift-gala' })"
             >
-            </app-small-update> -->
+            </app-small-update>
 
             <app-small-update
               title="Chronicling My Struggles with the Nasal Vowels as I Learn French"
@@ -119,14 +127,6 @@ interface Article {
             >
             </app-small-update>
 
-            <!-- <app-small-update
-              title="Making an Environment: My Render from an Unreal Engine Intro Workshop"
-              imageUrl="/assets/unreal-intro-workshop.png"
-              description=""
-              (click)="openDetailPanel({ id: 'unreal-workshop' })"
-            >
-            </app-small-update> -->
-
             <app-small-update
               title="First Five Months of Hosting on Airbnb and I'm now a Superhost"
               imageUrl="/assets/rosamanda.png"
@@ -142,7 +142,7 @@ interface Article {
 
         <div class="flex flex-row justify-between">
           <div>
-            <p class="sans-serif-label-text">Last Updated: November 30, 2025</p>
+            <p class="sans-serif-label-text">Last Updated: January 12, 2026</p>
           </div>
           <div class="flex flex-row items-center space-x-0.5 justify-end">
             <img src="/assets/archive-icon.svg" alt="Archive Icon" class="w-5 h-5"/>

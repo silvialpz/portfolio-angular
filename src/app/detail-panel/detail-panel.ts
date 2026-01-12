@@ -161,8 +161,13 @@ import { CommonModule, DOCUMENT } from '@angular/common';
           </div>
 
           <div *ngIf="articleId === 'unreal-workshop'" class="flex flex-col gap-4">
-            <img src="/assets/output.gif" alt="">
-            <p>boo!</p>
+            <p>VES Toronto was promoting this in-person workshop for absolute beginners. I’ve been meaning to work with more 3D tools. However, my MacBook is slow, and all the UIs for these massive applications are intimidating. What holds me back most, though, is probably that I just want to create something that looks beautiful, and 3D is not intuitive to me.</p>
+            <p><a href="https://www.linkedin.com/in/robert-della-rossa-122070235/" target="_blank" style="text-decoration: underline;">Robert Della Rosa</a> hosts Unreal Engine workshops at Toronto Metropolitan University, and he’s an excellent teacher. He works at TMU’s Creative School as a virtual production technician. His introductory workshop had us creating a ten-second scene from zero UE5 knowledge over the course of a day.</p>
+            <p>Here’s my result :)</p>
+            <img src="/assets/output.mp4" alt="Unreal Engine Mangrove Scene Render">
+            <p>The concept is a mangrove forest. It is built from a free water asset, red maple trees, and a wooden deer. In my opinion, it has some <em>Flow</em> vibes. I love bright colors, so I manipulated the lighting to be at a sunset golden hour. The feedback I got from Robert was that it looks too saturated and unrealistic. That’s why it’s called Unreal though, right?</p>
+            <img src="/assets/unreal-engine-dude.png" alt="Unreal Engine Dude">
+            <img src="/assets/unreal-engine-environment-zoom-out.png" alt="Unreal Engine Zoom Out Environment">
           </div>
 
           <div *ngIf="articleId === 'equinox'" class="flex flex-col gap-4">
@@ -184,12 +189,23 @@ import { CommonModule, DOCUMENT } from '@angular/common';
             <p>boo!</p>
           </div>
 
+          <div *ngIf="articleId === 'wift-gala'" class="flex flex-col gap-4">
+            <img src="/assets/wift-gala-salon.jpeg" alt="WIFT Gala Salon">
+            <p>The Women in Film and Television’s Crystal Awards gala was the first time I really saw FASHION in Toronto; everyone looked fabulous. I was able to attend this special event because Abby Brockhouse, the WIFT events manager, put out a call for volunteers. I was a floater. So I rotated between being an attendant at the registration desk for a bit, a pathfinder, and a green room monitor.</p>
+            <img src="/assets/wift-gala-me-green.jpeg" alt="WIFT Gala Me in the Green Room" class="w-1/2 mx-auto">
+            <p>The honorees were awarded for creative excellence, innovation, business achievements, and mentorship. When they were introduced to go on stage, they played a prepared vignette video with talking heads from all their colleagues and mentees over the years, describing what made these women so amazing.</p>
+            <p>The most memorable parts of the event were definitely the beautifully prepared speeches by the nominees. I was able to listen to only a handful of the six women between my shifts. Sandie Maclean’s speech, receiving the special jury Distinction Award, was about how she broke into reporting in the 80’s—which was super funny. Annie Bradley, receiving the Mentorship Award, gave a very moving speech about her career: “Women need mentors and women need allies.”</p>
+            <p>It was delightful to meet others in Toronto pursuing careers in film &amp; TV. I also learned that it’s a volunteer community that comes back each year to support the event. The Fairmont Royal York was beautifully decorated for the holiday season, a very memorable venue.</p>
+            <p>Here is a picture of the centerpiece flowers that I was able to take home after the event (featuring the TTC).</p>
+            <img src="/assets/wift-gala-flowers.jpeg" alt="WiFT Gala Flower Centerpiece">
+          </div>
+
           <div *ngIf="articleId === 'learning-french'" class="flex flex-col gap-4">
             <p>There are THIRTEEN vowel sounds in French. </p>
             <img src="/assets/french-vowel-sounds.jpeg" alt="French vowel sounds">
             <p>The [u] sound in bonjour is not the same as the [y] sound in salut.</p>
             <p>Coming from Spanish where there are five vowels that all directly correspond to a single vowel letter, that’s really really confusing and convoluted. I am still working really hard to train my ear to listen for <em>le</em> instead of <em>lu</em>. </p>
-            <img class="w-1/2" src="/assets/french-nasal-vowels.jpeg" alt="French nasal vowels">
+            <img class="w-1/2 mx-auto" src="/assets/french-nasal-vowels.jpeg" alt="French nasal vowels">
             <p>And then there are the nasal vowels… they’re probably not that hard to pronounce but I just feel very silly being so nasally so I don’t full send it. </p>
             <p>I've always been told that learning french as a fluent English and Spanish speaker would be easy. French is still a really weird language and sometimes my knowledge of Spanish is why I get frustrated. </p>
             <p><u>Nombres:</u> <br> In Spanish this means names, and numbers is <em>números</em> <br><em>Numero</em> in french means <em>número</em>, but i don’t know why <em>nombre</em> is <em>pre-nom</em></p>
@@ -229,12 +245,12 @@ import { CommonModule, DOCUMENT } from '@angular/common';
   styleUrl: './detail-panel.css'
 })
 export class DetailPanelComponent implements AfterViewInit {
-  @Input() isOpen: boolean = false; 
+  @Input() isOpen: boolean = false;
   @Input() articleId: any | null = null;
 
   @Output() close = new EventEmitter<void>();
 
-  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {}
+  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) { }
 
   ngAfterViewInit(): void {
     if (this.articleId === 'superhost') {
@@ -248,7 +264,7 @@ export class DetailPanelComponent implements AfterViewInit {
       this.loadAirbnbScript();
     }
   }
-  
+
   closePanel() {
     this.close.emit();
   }
@@ -258,7 +274,7 @@ export class DetailPanelComponent implements AfterViewInit {
     script.type = 'text/javascript';
     script.src = 'https://www.airbnb.ca/embeddable/airbnb_jssdk';
     script.async = true;
-    
+
     // Check if the script is already loaded to avoid duplicates
     const existingScript = this.document.querySelector(`script[src="${script.src}"]`);
     if (!existingScript) {

@@ -6,11 +6,13 @@ import { CommonModule, DOCUMENT } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <ng-container *ngIf="isOpen">
+    <ng-container>
       <div
         style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 40;"
-        class="backdrop-blur-sm"
+        class="blurry-bg"
         (click)="closePanel()"
+        [class.hidden]="!isOpen"
+        [attr.aria-hidden]="!isOpen"
       >
       </div>
 
@@ -18,6 +20,7 @@ import { CommonModule, DOCUMENT } from '@angular/common';
         style="position: fixed; top: 0; right: 0; height: 100%; z-index: 50; padding: 20px; overflow-y: auto;"
         class="w-1/2 bg-violet-100 detail-container"
         [class.open]="isOpen"
+        [attr.aria-hidden]="!isOpen"
       >
         <!-- Close Button -->
         <div class="flex justify-end relative px-10">
@@ -159,14 +162,14 @@ import { CommonModule, DOCUMENT } from '@angular/common';
           </div>
 
           <div *ngIf="!articleId">
-            <p>Please select an article to view its details.</p>
+            <p></p>
           </div>
 
           <div *ngIf="articleId === 'unreal-workshop'" class="flex flex-col gap-4">
             <p>VES Toronto was promoting this in-person workshop for absolute beginners. I’ve been meaning to work with more 3D tools. However, my MacBook is slow, and all the UIs for these massive applications are intimidating. What holds me back most, though, is probably that I just want to create something that looks beautiful, and 3D is not intuitive to me.</p>
             <p><a href="https://www.linkedin.com/in/robert-della-rossa-122070235/" target="_blank" style="text-decoration: underline;">Robert Della Rosa</a> hosts Unreal Engine workshops at Toronto Metropolitan University, and he’s an excellent teacher. He works at TMU’s Creative School as a virtual production technician. His introductory workshop had us creating a ten-second scene from zero UE5 knowledge over the course of a day.</p>
             <p>Here’s my result :)</p>
-            <img src="/assets/output.mp4" alt="Unreal Engine Mangrove Scene Render">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/41eRIGiFgCQ?si=xaBougrYi2OrNfsu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <p>The concept is a mangrove forest. It is built from a free water asset, red maple trees, and a wooden deer. In my opinion, it has some <em>Flow</em> vibes. I love bright colors, so I manipulated the lighting to be at a sunset golden hour. The feedback I got from Robert was that it looks too saturated and unrealistic. That’s why it’s called Unreal though, right?</p>
             <img src="/assets/unreal-engine-dude.png" alt="Unreal Engine Dude">
             <img src="/assets/unreal-engine-environment-zoom-out.png" alt="Unreal Engine Zoom Out Environment">

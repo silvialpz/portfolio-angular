@@ -1,0 +1,18 @@
+/* ...existing code ... */
+
+.detail-container {
+  transform: translateX(100%);
+  transition: transform .5s ease-out;
+  pointer-events: none;
+}
+.detail-container.open {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.blurry-bg {
+  backdrop-filter: blur(5px);
+}
+.blurry-bg.hidden {
+  backdrop-filter: blur(0px);
+}

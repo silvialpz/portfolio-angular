@@ -177,7 +177,7 @@ import { CommonModule, DOCUMENT } from '@angular/common';
 
           <div *ngIf="articleId === 'equinox'" class="flex flex-col gap-4">
             <p>As part of my goal of becoming an Assistant Technical Director, I’ve been meaning to learn a digital content creation (DCC) software. It’s been an intimidating task for a while, so it felt serendipitous when SideFX announced a free three-day event packed with workshops.</p>
-            <img src="/assets/equinox-selfie.png" alt="Equinox selfie">
+            <img src="/assets/equinox-selfie.png" alt="Equinox selfie" class="w-1/2 mx-auto">
             <p>The first day offered an introduction to Houdini, their 3D animation software. The tickets were already sold out by the time I heard about it, but luckily my friend Rob knew Debra Isaac, who happened to be teaching the class. With Houdini pre-installed on our laptops, we were ready to dive in.</p>
             <p>That first session was my introduction to what people call a node-based, procedural workflow—and I really liked it. Imagine that Scratch had a dark-mode baby with Notion—that’s what using Houdini felt like to me. We ended the day making a UFO abducting the test geometry model, Tommy.</p>
             <img src="/assets/equinox-ufo-tommy.png" alt="Equinox UFO abducting Tommy">

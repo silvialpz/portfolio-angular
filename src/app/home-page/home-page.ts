@@ -86,15 +86,25 @@ interface Article {
               imageUrl="/assets/unreal-intro-workshop.png"
               description=""
               (click)="openDetailPanel({ id: 'unreal-workshop' })"
+              type="techy"
             >
             </app-small-update>
+
+            <!-- <app-small-update
+                title="CTRL + ALT + SLAY: Mentoring at HER CODE CAMP's Intro Programming Workshop"
+                imageUrl="/assets/her-code-camp-square-logo.png"
+                description=""
+                (click)="openDetailPanel({ id: 'unreal-workshop' })"
+                type="techy"
+              >
+              </app-small-update> -->
           </div>
 
           <div class="md:col-span-4">
             <app-big-update
                 title="Completed My Computer Engineering Degree at UofT"
                 imageUrl="/assets/graduated.jpg"
-                description="Now seeking an entry level role animation/VFX"
+                description="Now seeking an entry level role in animation/VFX"
                 (click)="openDetailPanel({ id: 'graduated' })"
               ></app-big-update>
           </div>
